@@ -4,4 +4,4 @@ default: DRIVER=WATIR <%= std_opts %>
 watir_webdriver: DRIVER=WATIR <%= std_opts %>
 selenium_webdriver: DRIVER=SELENIUM <%= std_opts %>
 focus: DRIVER=WATIR <%= std_opts %> --tags @focus
-#focus: DRIVER=SELENIUM <%= std_opts %> -tags @focus
+#focus: DRIVER=SELENIUM <%= std_opts %> --tags @focus
