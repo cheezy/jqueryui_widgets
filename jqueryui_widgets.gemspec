@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["jeff.morgan@leandog.com"]
   gem.description   = %q{Wrapper around jQueryUI controls for use with page-object gem}
   gem.summary       = %q{Wrapper around jQueryUI controls for use with page-object gem}
-  gem.homepage      = "http://github.com/cheezy/jqueryui-widgets"
+  gem.homepage      = "http://github.com/cheezy/jqueryui_widgets"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
