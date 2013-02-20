@@ -2,11 +2,11 @@ Given /^I am on the basic dialog page$/ do
   visit BasicDialogPage
 end
 
-Then /^the basic dialog title should be "([^"]*)"$/ do |title|
+Then /^the basic dialog title should be "(.+)"$/ do |title|
   on(BasicDialogPage).basic_dialog.title.should == title
 end
 
-When /^the content should include "([^"]*)"$/ do |content|
+When /^the content should include "(.+)"$/ do |content|
   on(BasicDialogPage).basic_dialog.content.should include content
 end
 
