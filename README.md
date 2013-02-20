@@ -1,6 +1,10 @@
-# JqueryuiWidgets
+# jqueryui_widgets
 
-TODO: Write a gem description
+This is a ruby wrapper around some of the jQueryUI controls to make them easy to use with the [page-object gem](http://github.com/cheezy/page-object).
+
+## Known Issues
+
+This widgets that make up this gem will not work properly if you are using SeleniumWebDriver as the driver and nested within a frame or iframe.
 
 ## Installation
 
@@ -15,10 +19,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install jqueryui_widgets
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Contributing
 
