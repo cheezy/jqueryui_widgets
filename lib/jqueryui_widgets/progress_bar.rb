@@ -11,4 +11,10 @@ class JQueryUIWidgets::ProgressBar < PageObject::Elements::Div
     maximum = maximum.to_i if maximum
     maximum
   end
+
+  def current
+    current = attribute('aria-valuenow')
+    current = current.to_i if current
+    current
+  end
 end

@@ -8,3 +8,6 @@ Feature: Using the progress bar
 
   Scenario: Getting the max value
     Then the maximum value should be "100"
+
+  Scenario: Getting the current value
+    Then the current value should be "37"
