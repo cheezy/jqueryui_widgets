@@ -10,3 +10,8 @@ Feature: Using the jqueryui Tab widget
   Scenario: Selected Tab Should Be
     When I select the "Proin dolor" tab
 	Then the current tab should be "Proin dolor"
+
+  Scenario: Getting All Tab Names
+    Then the tab labels should include "Nunc tincidunt"
+    And the tab labels should include "Proin dolor"
+    And the tab labels should include "Aenean lacinia"

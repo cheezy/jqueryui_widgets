@@ -9,3 +9,7 @@ end
 Then /^the current tab should be "(.+)"$/ do |label|
   on(TabsPage).tabs.selected.should == label
 end
+
+Then /^the tab labels should include "([^"]*)"$/ do |label|
+  on(TabsPage).tabs.labels.should include label
+end

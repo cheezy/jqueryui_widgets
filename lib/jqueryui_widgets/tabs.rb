@@ -6,5 +6,9 @@ class JQueryUIWidgets::Tabs < PageObject::Elements::UnorderedList
 
   def selected
     list_item_element(:class => 'ui-tabs-active').link_element.text
-  end  
+  end
+
+  def labels
+    link_elements(:class => 'ui-tabs-anchor').map(&:text)
+  end
 end
