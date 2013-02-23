@@ -3,6 +3,7 @@
   * Added selected method to Tabs
   * Added Progress Bar functionality
     * Added minimum method to Progress Bar
+    * Added maximum method to Progress Bar
 
 === Version 0.2 / 2013-2-20
 * Ehnahcements

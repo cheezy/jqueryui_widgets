@@ -5,3 +5,6 @@ end
 Then /^the minimum value should be "(.+)"$/ do |minimum_value|
   on(ProgressBarPage).progress_bar.minimum.should == minimum_value.to_i
 end
+Then /^the maximum value should be "(.+)"$/ do |maximum_value|
+  on(ProgressBarPage).progress_bar.maximum.should == maximum_value.to_i
+end

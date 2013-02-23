@@ -7,6 +7,8 @@ class JQueryUIWidgets::ProgressBar < PageObject::Elements::Div
   end
 
   def maximum
-    attribute('aria-valuemax')
+    maximum = attribute('aria-valuemax')
+    maximum = maximum.to_i if maximum
+    maximum
   end
 end
