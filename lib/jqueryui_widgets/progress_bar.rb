@@ -1,20 +1,21 @@
 class JQueryUIWidgets::ProgressBar < PageObject::Elements::Div
 
   def minimum
-    minimum = attribute('aria-valuemin')
-    minimum = minimum.to_i if minimum
-    minimum
+    convert_to_number attribute('aria-valuemin')
   end
 
   def maximum
-    maximum = attribute('aria-valuemax')
-    maximum = maximum.to_i if maximum
-    maximum
+    convert_to_number attribute('aria-valuemax')
   end
 
   def current
-    current = attribute('aria-valuenow')
-    current = current.to_i if current
-    current
+    convert_to_number attribute('aria-valuenow')
   end
+
+  private
+  def convert_to_number(value)
+    value = value.to_i if value
+    value
+  end
+
 end
