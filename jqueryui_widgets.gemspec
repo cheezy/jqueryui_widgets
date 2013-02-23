@@ -6,8 +6,8 @@ require 'jqueryui_widgets/version'
 Gem::Specification.new do |gem|
   gem.name          = "jqueryui_widgets"
   gem.version       = JQueryUIWidgets::VERSION
-  gem.authors       = ["Jeffrey S. Morgan"]
-  gem.email         = ["jeff.morgan@leandog.com"]
+  gem.authors       = ["Jeffrey S. Morgan", "Paul Clewell"]
+  gem.email         = ["jeff.morgan@leandog.com", "andrevarshea@gmail.com"]
   gem.description   = %q{Wrapper around jQueryUI controls for use with page-object gem}
   gem.summary       = %q{Wrapper around jQueryUI controls for use with page-object gem}
   gem.homepage      = "http://github.com/cheezy/jqueryui_widgets"
