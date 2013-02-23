@@ -1,8 +1,10 @@
 === Version 0.3
 * Enhancements
   * Added selected method to Tabs
+  * Added Progress Bar functionality
+    * Added minimum method to Progress Bar
 
-=== Version 0.2
+=== Version 0.2 / 2013-2-20
 * Ehnahcements
   * Added Tabs
 
