@@ -49,7 +49,7 @@ class JQueryUIWidgets::Menus < PageObject::Elements::UnorderedList
   def loop_through_menu_items(labels)
     menu_container = self
     labels.each do |label|
-      menu_container.each do |list_item|
+      menu_items_for(menu_container).each do |list_item|
         if list_item.text.slice!(label) == label
           yield list_item
           menu_container = list_item.unordered_list_element
@@ -57,5 +57,9 @@ class JQueryUIWidgets::Menus < PageObject::Elements::UnorderedList
         end
       end
     end
+  end
+
+  def menu_items_for(menu)
+    menu.list_item_elements
   end
 end
