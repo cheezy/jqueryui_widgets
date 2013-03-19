@@ -1,4 +1,4 @@
-guard 'cucumber', :notification => false, :all_after_pass => false, :cli => '--profile focus' do
+guard 'cucumber', :notification => true, :all_after_pass => false, :cli => '--profile focus' do
   watch(%r{^features/.+\.feature$})
   watch(%r{^features/support/.+$})          { 'features' }
   watch(%r{^features/step_definitions/(.+)_steps\.rb$}) { 'features' }
