@@ -19,16 +19,9 @@ class JQueryUIWidgets::Menus < PageObject::Elements::UnorderedList
   #   the sub menu 'Delphi'
   #   and click on 'Ada' in the final submenu
   #
-  def select(*items)
-    menu_container = self
-    items.each do |item|
-      menu_container.each do |list_item|
-        if list_item.text == item
-          list_item.fire_event('onclick')
-          menu_container = list_item.unordered_list_element
-          break
-        end
-      end
+  def select(*labels)
+    loop_through_menu_items(labels) do |list_item|
+      list_item.fire_event('onclick')
     end
   end
 
@@ -45,16 +38,24 @@ class JQueryUIWidgets::Menus < PageObject::Elements::UnorderedList
   #
   def search_for(*labels)
     the_list_item = nil
+    loop_through_menu_items(labels) do |list_item|
+      the_list_item = list_item
+    end
+    the_list_item
+  end
+
+  private
+
+  def loop_through_menu_items(labels)
     menu_container = self
     labels.each do |label|
       menu_container.each do |list_item|
         if list_item.text.slice!(label) == label
-          the_list_item = list_item
+          yield list_item
           menu_container = list_item.unordered_list_element
           break
         end
       end
     end
-    the_list_item
   end
 end
