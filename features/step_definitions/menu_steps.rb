@@ -3,13 +3,19 @@ Given /^I am on the menus page$/ do
 end
 
 When /^I select the "(.+)" menu option$/ do |item|
-  on(MenuPage).menus.select_base_menu item
+  on(MenuPage).menus.select item
 end
 
-Then /^I should see the inactive option "(.+)"$/ do |item|
-  on(MenuPage).menus.inactive_menu_items.should include item
+Then /^I should see the inactive option "(.+)", "(.+)"$/ do |item1, item2|
+  item = on(MenuPage).menus.search_for(item1, item2)
+  item.attribute('class').should include 'ui-state-disabled'
 end
 
-When /^I should see the "(.+)" option$/ do |item|
-  on(MenuPage).menus.menu_items.should include item
+When /^I should see the "(.+)", "(.+)" option$/ do |item1, item2|
+  item = on(MenuPage).menus.search_for(item1, item2)
+  item.should_not be_nil
+end
+
+When /^I select "(.+)" and "(.+)" and "(.+)"$/ do |item1, item2, item3|
+  on(MenuPage).menus.select item1, item2, item3
 end
