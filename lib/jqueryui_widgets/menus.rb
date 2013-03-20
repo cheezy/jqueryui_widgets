@@ -49,13 +49,16 @@ class JQueryUIWidgets::Menus < PageObject::Elements::UnorderedList
   def loop_through_menu_items(labels)
     menu_container = self
     labels.each do |label|
+      item_found = false
       menu_items_for(menu_container).each do |list_item|
         if list_item.text.slice!(label) == label
           yield list_item
           menu_container = list_item.unordered_list_element
+          item_found = true
           break
         end
       end
+      raise("Unable to find menu item #{label}") unless item_found
     end
   end
 

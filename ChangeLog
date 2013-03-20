@@ -1,6 +1,8 @@
 === Version 0.4
 * Enhancements
   * Added Menus functionality
+  * Added documentation on dialogs, menus, progress bar and tabs.
+  * Added in error handling for Menus.
 
 === Version 0.3 / 2013-2-23
 * Enhancements
