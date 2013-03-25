@@ -1,7 +1,12 @@
+== Version 0.5
+ * Enhancements
+   * Added in Accordion functionality
+   * Added documentation on tabs.
+
 === Version 0.4 / 2013-3-20
 * Enhancements
   * Added Menus functionality
-  * Added documentation on dialogs, menus, progress bar and tabs.
+  * Added documentation on dialogs, menus, progress bar.
   * Added in error handling for Menus.
 
 === Version 0.3 / 2013-2-23
