@@ -13,3 +13,11 @@ end
 Then /^the accordion labels should include "([^"]*)"$/ do |label|
   on(AccordionPage).accordion.labels.should include label
 end
+
+Then /^the "([^"]*)" element should be selected$/ do |label|
+  on(AccordionPage).accordion.selected?(label).should be_true
+end
+
+When /^the "([^"]*)" element should not be selected$/ do |label|
+  on(AccordionPage).accordion.selected?(label).should be_false
+end
