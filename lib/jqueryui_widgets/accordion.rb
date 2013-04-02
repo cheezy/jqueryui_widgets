@@ -64,7 +64,6 @@ class JQueryUIWidgets::Accordion < PageObject::Elements::Div
   def wait_for_content(index)
     the_content = div_elements(:class => 'ui-accordion-content')[index]
     wait_until(1, "Content not visible within one second") do
-      puts the_content.style("display")
       the_content.style("display") == "block"
     end
   end
