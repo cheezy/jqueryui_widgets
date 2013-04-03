@@ -1,6 +1,15 @@
 
 #
-# Class that wraps the JQueryUI Tabs
+# Class that wraps the JQueryUI Tabs, allowing
+# the user to interact with tabbed items.
+#
+# NOTE: The Tabs Widget code will be kept as
+# basic as possible for the time being, since
+# the Widget itself is fully customizable, we
+# cannot allow for all of the possible
+# functionality. This will allow for users
+# to customize the gem to suit their own
+# needs for the widget.
 #
 
 class JQueryUIWidgets::Tabs < PageObject::Elements::UnorderedList

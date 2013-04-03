@@ -2,6 +2,11 @@
 #
 # Accordion class to make use of the Accordion widget.
 #
+# NOTE: Since JQueryUI Widgets are completely customizable,
+# we've kept the Accordion class limited to basic functionality
+# so that end users can pick up the gem and customize it to
+# suit their own needs.
+#
 class JQueryUIWidgets::Accordion < PageObject::Elements::Div
 
   #

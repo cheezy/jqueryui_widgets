@@ -5,6 +5,11 @@
 # returning the Minimum value, Maximum Value and
 # Current progress.
 #
+# NOTE: As with all JQuery UI Widgets, we have
+# left the Progress Bar code with the basics
+# of functionality to allow the user to
+# customize the gem to suit their own needs.
+#
 class JQueryUIWidgets::ProgressBar < PageObject::Elements::Div
 
   #

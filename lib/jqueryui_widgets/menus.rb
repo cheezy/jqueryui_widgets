@@ -1,6 +1,15 @@
 
 #
-# Class that wraps the jQueryUI menu.
+# Class that wraps the jQueryUI menu, allowing
+# users to interact with both top level, and
+# nested menus.
+#
+# NOTE: We've kept to the basic functionality
+# of the Menu widget in order to avoid causing
+# difficulty with the usage of the widget since
+# all of the JQuery UI Widgets are so customizable.
+# In this fashion, we allow the user to customize
+# the code to suit their own needs.
 #
 class JQueryUIWidgets::Menus < PageObject::Elements::UnorderedList
 

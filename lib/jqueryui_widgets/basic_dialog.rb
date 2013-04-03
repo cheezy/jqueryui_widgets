@@ -3,6 +3,13 @@
 # Basic Dialog allows JQuery UI Widgets to interact
 # with the basic dialogs that JQueryUI pops up.
 #
+# NOTE: JQueryUI Widgets are very customizable,
+# so we've kept the functionality for the dialogs
+# class as rudimentary as possible, to allow the
+# end user to build up any functionality they
+# require, and customize the class to suit their
+# particular needs.
+#
 class JQueryUIWidgets::BasicDialog < PageObject::Elements::Div
 
   #
