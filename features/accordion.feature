@@ -1,4 +1,3 @@
-@focus
 Feature: Using the Accordion Widget
 
   This feature will test using the accordion widget.
