@@ -2,6 +2,8 @@
 class JQueryUIWidgets::Slider < PageObject::Elements::Div
 
   def current
-    link(:class => 'ui-slider-handle').style.delete('left: ').gsub(';','')
+    value = link_element(:class => 'ui-slider-handle').style('left')
+    puts value
+    value.chomp("px")
   end
 end

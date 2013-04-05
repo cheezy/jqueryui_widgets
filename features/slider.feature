@@ -8,4 +8,4 @@ Feature: Using the JQueryUI Slider Widget
 
    @focus
   Scenario: Using the Slider widget
-    Then the current value of the slider should be "0%"
+    Then the current value of the slider should be "0"
