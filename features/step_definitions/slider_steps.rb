@@ -1,6 +1,5 @@
 Given /^I am on the slider page$/ do
-  @page = SliderPage.new(@browser)
-  @page.navigate_to "file://#{File.expand_path(File.dirname(__FILE__) + '/../../html/slider.html')}"
+  visit SliderPage
 end
 
 Then /^the current value of the slider should be "([^"]*)"$/ do |percent|
