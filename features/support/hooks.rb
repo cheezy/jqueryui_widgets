@@ -7,8 +7,8 @@ module PersistentBrowser
 
   def self.get_browser
     unless @@browser
-      @@browser = Watir::Browser.new :chrome if ENV['DRIVER'] == 'WATIR'
-      @@browser = Selenium::WebDriver.for :chrome if ENV['DRIVER'] == 'SELENIUM'
+      @@browser = Watir::Browser.new :firefox if ENV['DRIVER'] == 'WATIR'
+      @@browser = Selenium::WebDriver.for :firefox if ENV['DRIVER'] == 'SELENIUM'
     end
     @@browser
   end
