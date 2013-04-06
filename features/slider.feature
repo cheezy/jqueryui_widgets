@@ -6,6 +6,5 @@ Feature: Using the JQueryUI Slider Widget
   Background:
     Given I am on the slider page
 
-   @focus
   Scenario: Using the Slider widget
     Then the current value of the slider should be "0"

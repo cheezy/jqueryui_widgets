@@ -3,6 +3,5 @@ Given /^I am on the slider page$/ do
 end
 
 Then /^the current value of the slider should be "([^"]*)"$/ do |percent|
-  sleep 10
-  on(SliderPage).slider.current.should == percent
+  on(SliderPage).slider.value.should == percent
 end
