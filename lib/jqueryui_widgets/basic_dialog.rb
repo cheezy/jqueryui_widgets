@@ -27,15 +27,18 @@ class JQueryUIWidgets::BasicDialog < PageObject::Elements::Div
 
   def self.accessor_methods(accessor, name)
     accessor.send :define_method, "#{name}_title" do
-      div_element(:class => 'ui-dialog-titlebar').span_element.text
+      dialog = self.send "#{name}_element"
+      dialog.div_element(:class => 'ui-dialog-titlebar').span_element.text
     end
 
     accessor.send :define_method, "#{name}_content" do
-      div_element(:class => 'ui-dialog-content').text
+      dialog = self.send "#{name}_element"
+      dialog.div_element(:class => 'ui-dialog-content').text
     end
 
     accessor.send :define_method, "close_#{name}" do
-      button_element(:class => 'ui-dialog-titlebar-close').click
+      dialog = self.send "#{name}_element"
+      dialog.button_element(:class => 'ui-dialog-titlebar-close').click
     end
   end
 
