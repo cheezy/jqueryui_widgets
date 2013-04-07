@@ -1,3 +1,4 @@
+@focus
 Feature: Using the jqueryui_dialog BasicDialog widget
 
   Background:
