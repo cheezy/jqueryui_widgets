@@ -1,3 +1,4 @@
+require 'jqueryui_widgets/core_ext/string'
 
 #
 # The progress bar class will interact with the
@@ -13,36 +14,37 @@
 class JQueryUIWidgets::ProgressBar < PageObject::Elements::Div
 
   #
-  # The minimum function returns the minimum
+  # Generates three methods.
+  #
+  # The {NAME}_min function returns the minimum
   # possible value of the progress bar by
   # returning the 'aria-valuemin' attribute's
   # value.
   #
-  def minimum
-    convert_to_number attribute('aria-valuemin')
-  end
-
-  #
-  # The maximum function returns the maximum
+  # The {NAME}_max function returns the maximum
   # value of the progress bar by returning
   # the 'aria-valuemax' attribute's value.
-  def maximum
-    convert_to_number attribute('aria-valuemax')
-  end
-
   #
-  # The Current function returns the current
+  # The {NAME} function returns the current
   # value of the progress bar by returning the
   # 'aria-valuenow' attribute's value.
   #
-  def current
-    convert_to_number attribute('aria-valuenow')
-  end
+  def self.accessor_methods(accessor, name)
+    accessor.send :define_method, "#{name}" do
+      progress_bar = self.send "#{name}_element"
+      progress_bar.attribute('aria-valuenow').convert_to_number
+    end
 
-  private
-  def convert_to_number(value)
-    value = value.to_i if value
-    value
+    accessor.send :define_method, "#{name}_min" do
+      progress_bar = self.send "#{name}_element"
+      progress_bar.attribute('aria-valuemin').convert_to_number
+    end
+
+    accessor.send :define_method, "#{name}_max" do
+      progress_bar = self.send "#{name}_element"
+      progress_bar.attribute('aria-valuemax').convert_to_number
+    end
+
   end
 
 end
