@@ -6,6 +6,7 @@ require 'jqueryui_widgets/progress_bar'
 require 'jqueryui_widgets/menus'
 require 'jqueryui_widgets/accordion'
 require 'jqueryui_widgets/slider'
+require 'jqueryui_widgets/spinner'
 
 module JQueryUIWidgets
 
@@ -15,5 +16,6 @@ module JQueryUIWidgets
   PageObject.register_widget(:jqueryui_menus, JQueryUIWidgets::Menus, 'ul')
   PageObject.register_widget(:jqueryui_accordion, JQueryUIWidgets::Accordion, 'div')
   PageObject.register_widget(:jqueryui_slider, JQueryUIWidgets::Slider, 'div')
+  PageObject.register_widget(:jqueryui_spinner, JQueryUIWidgets::Spinner, 'p')
 
 end
