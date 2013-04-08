@@ -7,4 +7,6 @@ Feature: Using the JQueryUI Slider Widget
     Given I am on the slider page
 
   Scenario: Using the Slider widget
-    Then the current value of the slider should be "0"
+    Then the current value of the slider should be "0%"
+
+
