@@ -9,7 +9,6 @@ Feature: Using the JQueryUI Slider Widget
   Scenario: Using the Slider widget
     Then the current value of the slider should be "0%"
 
-  @focus
   Scenario: Setting the Slider to a specific value
-    When I move the slider to "10%"
+    When I move the slider to "20%"
     Then the current value of the slider should be "10%"

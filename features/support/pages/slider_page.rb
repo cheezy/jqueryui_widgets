@@ -5,4 +5,7 @@ class SliderPage
 
   jqueryui_slider(:the_slider, :id => 'slider')
 
+  def slider
+    the_slider_element
+  end
 end

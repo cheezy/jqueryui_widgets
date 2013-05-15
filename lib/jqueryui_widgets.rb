@@ -16,6 +16,6 @@ module JQueryUIWidgets
   PageObject.register_widget(:jqueryui_menus, JQueryUIWidgets::Menus, 'ul')
   PageObject.register_widget(:jqueryui_accordion, JQueryUIWidgets::Accordion, 'div')
   PageObject.register_widget(:jqueryui_slider, JQueryUIWidgets::Slider, 'div')
-  PageObject.register_widget(:jqueryui_spinner, JQueryUIWidgets::Spinner, 'p')
+  PageObject.register_widget(:jqueryui_spinner, JQueryUIWidgets::Spinner, 'span')
 
 end
