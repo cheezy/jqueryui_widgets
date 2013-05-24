@@ -1,11 +1,15 @@
+
 Feature: Using the JQueryUI Spinner Widget
 
   Background:
     Given I am on the spinner page
 
-  @focus
-  Scenario: Spinner enable and disable toggle
-    When I click the "Toggle disable/enable" button
-    Then the Spinner widget should be disabled
-    When I click the "Toggle disable/enable" button
-    Then the Spinner widget should be enabled
+  Scenario: Adjust the spinner value with arrows
+    When I click the increment button
+    Then the Spinner Widget should read "1"
+    When I click the decrement button
+    Then the Spinner Widget should read "0"
+
+  Scenario: Manually set the spinner value
+    When I set the spinner value to "10"
+    Then the Spinner Widget should read "10"

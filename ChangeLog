@@ -1,7 +1,8 @@
-== Version 0.6
+== Version 0.6 / 2013-5-24
  * Enhancements
    * New functionality from Page Object
    * Added in Slider functionality
+   * Added in Spinner functionality
    * Additional documentation for all widgets
 
 == Version 0.5 / 2013-3-29
