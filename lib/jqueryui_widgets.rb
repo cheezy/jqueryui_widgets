@@ -7,6 +7,7 @@ require 'jqueryui_widgets/menus'
 require 'jqueryui_widgets/accordion'
 require 'jqueryui_widgets/slider'
 require 'jqueryui_widgets/spinner'
+require 'jqueryui_widgets/datepicker'
 
 module JQueryUIWidgets
 
@@ -17,5 +18,6 @@ module JQueryUIWidgets
   PageObject.register_widget(:jqueryui_accordion, JQueryUIWidgets::Accordion, 'div')
   PageObject.register_widget(:jqueryui_slider, JQueryUIWidgets::Slider, 'div')
   PageObject.register_widget(:jqueryui_spinner, JQueryUIWidgets::Spinner, 'span')
+  PageObject.register_widget(:jqueryui_datepicker, JQueryUIWidgets::Datepicker, 'text_field')
 
 end
