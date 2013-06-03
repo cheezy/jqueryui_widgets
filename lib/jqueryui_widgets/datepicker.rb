@@ -68,7 +68,7 @@ class JQueryUIWidgets::Datepicker < PageObject::Elements::TextField
     end
 
     accessor.send :define_method, "#{name}_day" do
-      datepicker_div.table_element.link_element(:class => 'ui-state-active').text
+      datepicker_div.table_element.link_element(:class => 'ui-state-active').text unless datepicker_div.table_element.link_element.attribute('class' => 'ui-state-active') == nil
     end
 
     accessor.send :define_method, "#{name}_month" do
