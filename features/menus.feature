@@ -16,4 +16,4 @@ Feature: Using the menus widget
     Then I should see the "Salzburg", "Delphi", "Ada" option
 
   Scenario: Should raise error when non-existing menu item is given
-    Then I should have an error when I search for menu item "Taco"
+    Then I should have an error when I search for menu item "b"

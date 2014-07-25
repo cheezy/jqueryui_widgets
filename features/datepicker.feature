@@ -9,7 +9,7 @@ Feature: Using the JQueryUI Datepicker widget
     And I select day "25"
     Then the date should be "05/25/2013"
 
-  @focus
+
   Scenario: Adjusting the month by arrow clicks
     When I enter the date "05/10/2013"
     Then the day should be "10" the month should be "May" and the year should be "2013"

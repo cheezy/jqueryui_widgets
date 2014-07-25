@@ -1,5 +1,5 @@
 require 'page-object'
-require "jqueryui_widgets/version"
+require 'jqueryui_widgets/version'
 require 'jqueryui_widgets/basic_dialog'
 require 'jqueryui_widgets/tabs'
 require 'jqueryui_widgets/progress_bar'

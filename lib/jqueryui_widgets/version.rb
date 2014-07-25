@@ -1,3 +1,3 @@
 module JQueryUIWidgets
-  VERSION = "0.7.1"
+  VERSION = "1.0"
 end

@@ -21,7 +21,7 @@ class JQueryUIWidgets::Autocomplete < PageObject::Elements::TextField
     end
 
     def results
-      list_item_elements.map(&:text)
+      autocomplete_div_element.list_item_elements.class('ui-menu-item').map(&:text)
     end
 
     def select(item)
@@ -33,7 +33,15 @@ class JQueryUIWidgets::Autocomplete < PageObject::Elements::TextField
       wait_for_content(index)
     end
 
+    accessor.send :define_method, "autocomplete_list" do
+      self.send "unordered_list_element", :id => 'ui-id-1'
+    end
+
+    accessor.send :private, :autocomplete_list
+
+
   end
+
 
   private
 
