@@ -7,9 +7,9 @@ When /^I select the "(.+)" tab$/ do |label|
 end
 
 Then /^the current tab should be "(.+)"$/ do |label|
-  on(TabsPage).tabs.selected.should == label
+  expect(on(TabsPage).tabs.selected).to eql label
 end
 
 Then /^the tab labels should include "([^"]*)"$/ do |label|
-  on(TabsPage).tabs.labels.should include label
+  expect(on(TabsPage).tabs.labels).to include label
 end

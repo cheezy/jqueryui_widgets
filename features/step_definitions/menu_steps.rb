@@ -8,12 +8,12 @@ end
 
 Then /^I should see the inactive option "(.+)", "(.+)"$/ do |item1, item2|
   item = on(MenuPage).menus.search_for(item1, item2)
-  item.attribute('class').should include 'ui-state-disabled'
+  expect(item.attribute('class')).to include 'ui-state-disabled'
 end
 
 When /^I should see the "(.+)", "(.+)", "(.+)" option$/ do |item1, item2, item3|
   item = on(MenuPage).menus.search_for(item1, item2, item3)
-  item.should_not be_nil
+  expect(item).to_not be_nil
 end
 
 When /^I select "(.+)" and "(.+)" and "(.+)"$/ do |item1, item2, item3|
@@ -26,5 +26,5 @@ end
 
 When /^I should see the "([^"]*)", "([^"]*)" option$/ do |item1, item2|
   item = on(MenuPage).menus.search_for(item1, item2)
-  item.should_not be_nil
+  expect(item).to_not be_nil
 end

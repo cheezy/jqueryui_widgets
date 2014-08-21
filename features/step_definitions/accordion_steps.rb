@@ -7,17 +7,17 @@ When /^I select the "([^"]*)" accordion element$/ do |label|
 end
 
 Then /^the current accordion element should be "([^"]*)"$/ do |label|
-  on(AccordionPage).accordion.selected.should == label
+  expect(on(AccordionPage).accordion.selected).to eql label
 end
 
 Then /^the accordion labels should include "([^"]*)"$/ do |label|
-  on(AccordionPage).accordion.labels.should include label
+  expect(on(AccordionPage).accordion.labels).to include label
 end
 
 Then /^the "([^"]*)" element should be selected$/ do |label|
-  on(AccordionPage).accordion.selected?(label).should be_true
+  expect(on(AccordionPage).accordion.selected?(label)).to be_true
 end
 
 When /^the "([^"]*)" element should not be selected$/ do |label|
-  on(AccordionPage).accordion.selected?(label).should be_false
+  expect(on(AccordionPage).accordion.selected?(label)).to be_false
 end

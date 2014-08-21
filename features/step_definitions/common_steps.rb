@@ -1,3 +1,3 @@
 Then /^I should see "(.+)"$/ do |expected|
-  @current_page.text.should include expected
+  expect(@current_page.text).to include expected
 end

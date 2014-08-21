@@ -3,7 +3,6 @@ Feature: Using the JQueryUI Autocomplete widget
   Background:
     Given I am on the autocomplete page
 
-  @focus
   Scenario: Entering a letter
     When I enter "b" in the autocomplete widget
     Then I should see that each item in the autocomplete list contains "b"

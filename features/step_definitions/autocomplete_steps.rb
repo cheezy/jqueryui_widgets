@@ -9,7 +9,7 @@ end
 Then(/^I should see that each item in the autocomplete list contains "([^"]*)"$/) do |text|
   on(AutocompletePage) do |page|
     page.autocomplete_unordered_list_element.list_item_element.when_visible
-    page.autocomplete_unordered_list_element.list_item_elements.to_s.should include text
+    expect(page.autocomplete_unordered_list_element.list_item_elements.to_s).to include text
   end
 end
 

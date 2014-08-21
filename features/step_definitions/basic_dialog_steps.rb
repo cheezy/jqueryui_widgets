@@ -3,11 +3,11 @@ Given /^I am on the basic dialog page$/ do
 end
 
 Then /^the basic dialog title should be "(.+)"$/ do |title|
-  on(BasicDialogPage).the_dialog_title.should == title
+  expect(on(BasicDialogPage).the_dialog_title).to eql title
 end
 
 When /^the content should include "(.+)"$/ do |content|
-  on(BasicDialogPage).the_dialog_content.should include content
+  expect(on(BasicDialogPage).the_dialog_content).to include content
 end
 
 When /^I close the basic dialog$/ do
@@ -15,6 +15,6 @@ When /^I close the basic dialog$/ do
 end
 
 Then /^the basic dialog should not be visible$/ do
-  on(BasicDialogPage).the_dialog_element.should_not be_visible
+  expect(on(BasicDialogPage).the_dialog_element).to_not be_visible
 end
 

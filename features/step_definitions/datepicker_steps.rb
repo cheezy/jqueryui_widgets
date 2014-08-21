@@ -7,7 +7,8 @@ When(/^I select day "(\d+)"$/) do |day|
 end
 
 Then(/^the date should be "([^\"]*)"$/) do |day|
-  on(DatepickerPage).datepicker_one.should == day
+  #on(DatepickerPage).datepicker_one.should == day
+  expect(on(DatepickerPage).datepicker_one).to eql day
 end
 
 When(/^I enter the date "([^\"]*)"$/) do |date|
@@ -20,9 +21,9 @@ end
 
 Then(/^the day should be "(\d*)" the month should be "(\w+)" and the year should be "(\d+)"$/) do |day, month, year|
   on(DatepickerPage) do |page|
-    page.datepicker_one_day.should == day unless page.datepicker_one_day == nil
-    page.datepicker_one_month.should == month
-    page.datepicker_one_year.should == year
+    expect(page.datepicker_one_day).to eql day unless page.datepicker_one_day == nil
+    expect(page.datepicker_one_month).to eql month
+    expect(page.datepicker_one_year).to eql year
   end
 end
 
@@ -35,5 +36,5 @@ When(/^I enter the date "([^\"]*)" in the second date picker$/) do |date|
 end
 
 Then(/^the date of the second datepicker should be "([^\"]*)"$/) do |date|
-  on(DatepickerPage).datepicker_two.should == date
+  expect(on(DatepickerPage).datepicker_two).to eql date
 end

@@ -15,5 +15,6 @@ Feature: Using the menus widget
     When I select "Salzburg" and "Delphi" and "Ada"
     Then I should see the "Salzburg", "Delphi", "Ada" option
 
+  @focus
   Scenario: Should raise error when non-existing menu item is given
-    Then I should have an error when I search for menu item "b"
+    Then I should have an error when I search for menu item "Taco"

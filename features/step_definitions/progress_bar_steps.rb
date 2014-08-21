@@ -3,13 +3,13 @@ Given /^I am on the Progress Bar page$/ do
 end
 
 Then /^the minimum value should be "(.+)"$/ do |minimum_value|
-  on(ProgressBarPage).the_progress_min.should == minimum_value.to_i
+  expect(on(ProgressBarPage).the_progress_min).to eql minimum_value.to_i
 end
 
 Then /^the maximum value should be "(.+)"$/ do |maximum_value|
-  on(ProgressBarPage).the_progress_max.should == maximum_value.to_i
+  expect(on(ProgressBarPage).the_progress_max).to eql maximum_value.to_i
 end
 
 Then /^the current value should be "(.+)"$/ do |current_value|
-  on(ProgressBarPage).the_progress.should == current_value.to_i
+  expect(on(ProgressBarPage).the_progress).to eql current_value.to_i
 end

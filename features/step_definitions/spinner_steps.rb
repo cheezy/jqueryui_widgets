@@ -7,7 +7,7 @@ When(/^I click the increment button$/) do
 end
 
 Then(/^the Spinner Widget should read "([^"]*)"$/) do |value|
-  on(SpinnerPage).the_spinner.should == value
+  expect(on(SpinnerPage).the_spinner).to eql value
 end
 
 When(/^I click the decrement button$/) do
